@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #74ebd5, #9face6);
+min-height: 100vh;
+padding: 20px;
+color: #222;
+transition: 0.3s;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+margin-bottom: 35px;
+}
+
+header h1 {
+font-size: 26px;
+}
+
+button {
+padding: 12px 18px;
+border: none;
+border-radius: 8px;
+background: #3155a4;
+color: white;
+cursor: pointer;
+font-size: 14px;
+}
+
+button:hover {
+opacity: 0.85;
+}
+
+main {
+max-width: 750px;
+margin: auto;
+}
+
+.search-section {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-bottom: 25px;
+}
+
+input {
+flex: 1;
+min-width: 180px;
+padding: 13px;
+border: none;
+border-radius: 8px;
+font-size: 15px;
+}
+
+#weatherContainer,
+.favorites-section {
+background: white;
+padding: 25px;
+border-radius: 15px;
+margin-bottom: 20px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+#weatherContainer {
+min-height: 180px;
+text-align: center;
+}
+
+#weatherContainer h2 {
+margin-bottom: 15px;
+}
+
+.weather-icon {
+font-size: 55px;
+margin: 15px;
+}
+
+.temperature {
+font-size: 42px;
+font-weight: bold;
+margin: 10px;
+}
+
+.weather-details {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 15px;
+margin-top: 20px;
+}
+
+.favorite-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 12px;
+padding: 12px;
+background: #edf2ff;
+border-radius: 8px;
+}
+
+.favorite-item button {
+padding: 8px 12px;
+}
+
+.favorites-section h2 {
+margin-bottom: 15px;
+}
+
+/* Dark mode */
+
+body.dark {
+background: #151b2b;
+color: white;
+}
+
+body.dark #weatherContainer,
+body.dark .favorites-section {
+background: #263149;
+color: white;
+}
+
+body.dark .favorite-item {
+background: #384663;
+}
+
+@media (max-width: 500px) {
+header {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.search-section {
+    flex-direction: column;
+}
+
+.search-section input,
+.search-section button {
+    width: 100%;
+}
+
+  }
