@@ -41,7 +41,7 @@ opacity: 0.85;
 }
 
 main {
-max-width: 750px;
+max-width: 900px;
 margin: auto;
 }
 
@@ -102,6 +102,8 @@ margin-top: 20px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+flex-wrap: wrap;
+gap: 10px;
 margin-top: 12px;
 padding: 12px;
 background: #edf2ff;
@@ -116,39 +118,6 @@ padding: 8px 12px;
 margin-bottom: 15px;
 }
 
-/* Dark mode */
-
-body.dark {
-background: #151b2b;
-color: white;
-}
-
-body.dark #weatherContainer,
-body.dark .favorites-section {
-background: #263149;
-color: white;
-}
-
-body.dark .favorite-item {
-background: #384663;
-}
-
-@media (max-width: 500px) {
-header {
-flex-direction: column;
-align-items: flex-start;
-}
-
-.search-section {
-    flex-direction: column;
-}
-
-.search-section input,
-.search-section button {
-    width: 100%;
-}
-
-  }
 /* Five-day forecast */
 
 .forecast-container {
@@ -179,13 +148,44 @@ margin: 8px 0;
 font-size: 13px;
 }
 
+/* Dark mode */
+
+body.dark {
+background: #151b2b;
+color: white;
+}
+
+body.dark #weatherContainer,
+body.dark .favorites-section {
+background: #263149;
+color: white;
+}
+
+body.dark .favorite-item,
 body.dark .forecast-card {
 background: #384663;
 color: white;
 }
 
-@media (max-width: 400px) {
-.forecast-container {
-grid-template-columns: repeat(2, 1fr);
+/* Mobile responsive design */
+
+@media (max-width: 500px) {
+header {
+flex-direction: column;
+align-items: flex-start;
 }
+
+.search-section {
+    flex-direction: column;
+}
+
+.search-section input,
+.search-section button {
+    width: 100%;
+}
+
+.forecast-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 }
