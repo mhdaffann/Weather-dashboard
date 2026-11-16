@@ -149,3 +149,43 @@ align-items: flex-start;
 }
 
   }
+/* Five-day forecast */
+
+.forecast-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+gap: 12px;
+margin-top: 20px;
+}
+
+.forecast-card {
+background: #edf2ff;
+padding: 15px 8px;
+border-radius: 12px;
+text-align: center;
+}
+
+.forecast-card h3 {
+margin-bottom: 12px;
+}
+
+.forecast-icon {
+font-size: 30px;
+margin-bottom: 10px;
+}
+
+.forecast-card p {
+margin: 8px 0;
+font-size: 13px;
+}
+
+body.dark .forecast-card {
+background: #384663;
+color: white;
+}
+
+@media (max-width: 400px) {
+.forecast-container {
+grid-template-columns: repeat(2, 1fr);
+}
+}
