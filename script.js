@@ -84,6 +84,7 @@ try {
 
     const response = await fetch(weatherURL);
     const data = await response.json();
+console.log(data);
 
     if (!response.ok || !data.current) {
         throw new Error("Weather data unavailable");
